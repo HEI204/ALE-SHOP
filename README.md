@@ -21,7 +21,18 @@ If user have their own account, then the user can login their own account, it wi
 - Add to Cart:
 After user have login their account, user can add any product to the cart if they are interested in that product by clicking 'Add to Cart' button for that product and it will shows a sucessful message about added to the cart.
 
-If a user would like to buy the product in the cart then they can click 'Confirm Purchase' for purchase all items in the cart or user can click 'Remove' if they would like to remove the product in the cart
+If a user would like to buy the product in the cart then they can click 'Confirm Purchase' for purchase all items in the cart or user can click 'Remove' if they would like to remove the product in the cart. 
+
+Also, if a user do not have enoguh money to buy it, it will show a failure message to tell the user.
 ![image](https://user-images.githubusercontent.com/78290169/148876438-928edfb4-4720-474c-9cba-2df1d4779e23.png)
 
-- 
+- History page:
+If a user have purchase the items in the cart, then user can check their order information on the history page. Also, user can click 'View Detail' to check what product they have bought for that order
+![image](https://user-images.githubusercontent.com/78290169/148876899-70cb7a1f-19c0-4021-b269-20d88689220b.png)
+![image](https://user-images.githubusercontent.com/78290169/148876952-cb0e0bde-5e33-4ca6-afb7-1172d27954fd.png)
+
+- Add Cash:
+User can add any amount of cash that they would like to add by input the amount of cash in the input box and it will update immediately
+![image](https://user-images.githubusercontent.com/78290169/148876836-07e668a0-e2cd-4799-a504-f07de9af384b.png)
+
+
