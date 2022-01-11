@@ -7,4 +7,5 @@ It is my final project for CS50 which is web application about online shopping s
 ## Introduction
 
 - index page: 
-![image](https://user-images.githubusercontent.com/78290169/148875979-e9bf9a4a-d01f-4788-adf0-21075a01f79e.png)
+For the index page, it will show all the product that are available on the website and allow user to click 'Add to Cart' or click 'More Info' for each product.
+![image](https://user-images.githubusercontent.com/78290169/148876031-8cc09787-32bf-4f2b-b154-2b54bb771826.png)
