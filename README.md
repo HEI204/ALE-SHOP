@@ -9,3 +9,12 @@ It is my final project for CS50 which is web application about online shopping s
 - index page: 
 For the index page, it will show all the product that are available on the website and allow user to click 'Add to Cart' or click 'More Info' for each product.
 ![image](https://user-images.githubusercontent.com/78290169/148876031-8cc09787-32bf-4f2b-b154-2b54bb771826.png)
+
+- Register page:
+If a user do not have their own account, then the user need to create their own account, it will also check for the uniqueness of the username, validation for password and email in order to avoid any error during registration
+![image](https://user-images.githubusercontent.com/78290169/148876156-a10fc56f-73b0-476a-b9b9-6057413484ec.png)
+
+- Login page:
+If user have their own account, then the user can login their own account, it will check for the existance for the username that you input and correctness for the password with that username
+![image](https://user-images.githubusercontent.com/78290169/148876248-1104f652-c31f-474b-a3a0-e0c24fc1ff7d.png)
+
