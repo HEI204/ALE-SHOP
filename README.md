@@ -19,6 +19,7 @@ If user have their own account, then the user can login their own account, it wi
 ![image](https://user-images.githubusercontent.com/78290169/148876248-1104f652-c31f-474b-a3a0-e0c24fc1ff7d.png)
 
 - Add to Cart:
-<p>After user have login their account, user can add any product to the cart if they are interested in that product by clicking 'Add to Cart' button for that product and it will shows a sucessful message about added to the cart</p>
+After user have login their account, user can add any product to the cart if they are interested in that product by clicking 'Add to Cart' button for that product and it will shows a sucessful message about added to the cart
+<br>
 ![image](https://user-images.githubusercontent.com/78290169/148876485-db4e90cd-306e-48d1-8688-a2d2a1bae00d.png)
 ![image](https://user-images.githubusercontent.com/78290169/148876438-928edfb4-4720-474c-9cba-2df1d4779e23.png)
