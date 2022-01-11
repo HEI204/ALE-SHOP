@@ -43,4 +43,6 @@ User can add any amount of cash that they would like to add by input the amount 
 
 ## Reference:
 - <a href="https://youtu.be/Qr4QMBUPxWo">Flask Course - Python Web Application Development</a> (Inspiration from this video and take reference about the page design)
-
+- Stack Overflow
+- Bootstrap
+- W3School
