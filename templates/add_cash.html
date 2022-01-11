@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Cash
+{% endblock %}
+
+{% block money %}
+    {% if user_cash != 0 %}
+        Cash:
+        <i class="fas fa-coins"></i>
+        {{ user_cash }}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <form action="/add_cash" method="post">
+            <h5><p style="margin-top:50px; font-size:25px">Current Amount of Cash: ${{ user_cash }}</p></h5>
+            <br>
+            <p><h6 style="text-align:left;">Add Cash: </h6></p>
+            <div class="form-group">
+                <input autocomplete="off" class="form-control" name="added_cash" placeholder="Add Cash" type="text">
+            </div>
+            <br>
+            <button class="btn btn-lg btn-block btn-primary" type="submit">Add</button>
+        </form>
+    </div>
+{% endblock %}

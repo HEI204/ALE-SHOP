@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block content %}
+    <body class="text-center">
+        <div class="container">
+            <form action="/login" method="post">
+                <br>
+                <img class="mb-4" src="/static/images/image.png" alt="">
+                <h1 class="h3 mb-3 font-weight-normal">
+                Please Login
+                </h1>
+                <br>
+                <div class="form-group">
+                    <input autocomplete="off" class="form-control" name="username" placeholder="Username" type="text">
+                </div>
+
+                <div class="form-group">
+                    <input autocomplete="off" class="form-control" name="password" placeholder="Password" type="password">
+                </div>
+
+                <button class="btn btn-lg btn-block btn-primary" type="submit">Log In</button>
+                <br>
+                <div>
+                    <a href="/register"><h6>Do not have an account?</h6></a>
+                </div>
+            </form>
+        </div>
+    </body>
+{% endblock %}

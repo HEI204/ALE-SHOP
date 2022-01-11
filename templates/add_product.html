@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Product
+{% endblock %}
+
+{% block content %}
+    <body class="text-center">
+        <div class="container">
+            <form action="/add_product" method="post">
+                <br>
+                <h1 class="h3 mb-3 font-weight-normal">
+                Add new product
+                </h1>
+                <br>
+
+                <p><h6 style="text-align:left;">Name: </h6></p>
+                <div class="form-group">
+                    <input autocomplete="off" class="form-control" name="product_name" placeholder="Add Product Name" type="text">
+                </div>
+
+                <p><h6 style="text-align:left;">Price: </h6></p>
+                <div class="form-group">
+                    <input autocomplete="off" class="form-control" name="product_price" placeholder="Add Product Price" type="number">
+                </div>
+
+                <p><h6 style="text-align:left;">Discount: </h6></p>
+                <div class="form-group">
+                    <input autocomplete="off" class="form-control" name="product_discount" placeholder="Add Product Discount" type="number">
+                </div>
+
+                <p><h6 style="text-align:left;">Stock: </h6></p>
+                <div class="form-group">
+                    <input autocomplete="off" class="form-control" name="product_stocks" placeholder="Add Product Stock" type="integer">
+                </div>
+
+                <p><h6 style="text-align:left;">Description: </h6></p>
+                <div class="form-group">
+                    <textarea name="description" rows="5" cols="116"></textarea>
+                </div>
+
+                <button class="btn btn-lg btn-block btn-primary" type="submit">Add</button>
+                <br>
+            </form>
+        </div>
+    </body>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Admin Dashboard
+{% endblock %}
+
+{% block content %}
+    <br>
+    <h1 class="h3 mb-3 font-weight-normal" style="position: relative; left: 10px;">
+    Admin Dashboard
+    </h1>
+    <br>
+    <div style="position: relative; left: 10px;">
+        <a href="/add_product" class="btn btn-outline btn-info" role="button" aria-disabled="true">Add Product</a>
+    </div>
+
+    <br>
+    <table class="table table-hover table-dark" >
+        <thead>
+            <tr>
+                <th scope="col" style="text-align:center">Product Name</th>
+                <th scope="col" style="text-align:center">Price (HKD)</th>
+                <th scope="col" style="text-align:center">Discount (%)</th>
+                <th scope="col" style="text-align:center">Stocks</th>
+                <th scope="col" colspan="2" style="text-align:center">Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for product in market_info %}
+            <tr>
+                <td style="text-align:center"> {{ product["name"] }}</td>
+                <td style="text-align:center"> ${{ product["price"] }} </td>
+                <td style="text-align:center"> {{ (product["discount"]*100) }}% </td>
+                <td style="text-align:center"> {{ product["stock"] }} </td>
+                <td style="text-align:center">
+                    <a href="{{ url_for('update_product_info', selected_product_name=product["name"])}}" class="btn btn-outline btn-info" role="button" aria-disabled="true">Update</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
