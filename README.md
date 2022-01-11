@@ -31,6 +31,7 @@ Also, if a user do not have enoguh money to buy it, it will show a failure messa
 ![image](https://user-images.githubusercontent.com/78290169/148876438-928edfb4-4720-474c-9cba-2df1d4779e23.png)
 
 - History page:
+
 If a user have purchase the items in the cart, then user can check their order information on the history page. Also, user can click 'View Detail' to check what product they have bought for that order
 ![image](https://user-images.githubusercontent.com/78290169/148876899-70cb7a1f-19c0-4021-b269-20d88689220b.png)
 ![image](https://user-images.githubusercontent.com/78290169/148876952-cb0e0bde-5e33-4ca6-afb7-1172d27954fd.png)
