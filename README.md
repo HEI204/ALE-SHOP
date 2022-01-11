@@ -41,4 +41,6 @@ If a user have purchase the items in the cart, then user can check their order i
 User can add any amount of cash that they would like to add by input the amount of cash in the input box and it will update immediately
 ![image](https://user-images.githubusercontent.com/78290169/148876836-07e668a0-e2cd-4799-a504-f07de9af384b.png)
 
+## Reference:
+- <a href="https://youtu.be/Qr4QMBUPxWo">Flask Course - Python Web Application Development</a> (Inspiration from this video and take reference about the page design)
 
