@@ -121,8 +121,12 @@ def buy():
         order_id = order_id_generator()
         db.execute("UPDATE users SET cash = ? WHERE username = ?", new_user_cash, session["username"])
         for item in cart_items:
+            item_stock = db.execute("SELECT * FROM products WHERE id = ?", item["id"])[0]["stock"]
             db.execute("INSERT INTO transactions(order_id, product_id, user_id, price, timestamp) VALUES(?, ?, ?, ?, ?)",
                        order_id, item["id"], user_info["id"], item["price"], hk_time_now())
+            db.execute("UPDATE products SET stock = ? WHERE id = ?", (item_stock-1), item["id"])
+
+
         db.execute("DELETE FROM cart WHERE user_id = ?", user_info["id"])
         flash("You have bought sucessfully!", category='success')
 

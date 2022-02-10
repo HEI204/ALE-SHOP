@@ -17,7 +17,7 @@
             {% for product in market_info %}
             <div class="cards">
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="static/images/{{ product["name"] }}.jpg" alt="{{product["name"]}}">
+                    <img class="card-img-top" src="static/images/{{ product["name"] }}.jpg" alt="{{product["name"]}}" width="150" height="250">
                     <div class="card-body">
                         <h6>{{ product["name"] }}</h6>
                         <p>Price: $ {{ product["price"] }}</p>
