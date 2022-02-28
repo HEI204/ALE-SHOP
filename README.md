@@ -15,7 +15,7 @@ For the index page, it will show all the product that are available on the websi
 - Register page:
 
 If a user do not have their own account, then the user need to create their own account, it will also check for the uniqueness of the username, validation for password and email in order to avoid any error during registration
-![image](https://user-images.githubusercontent.com/78290169/148876156-a10fc56f-73b0-476a-b9b9-6057413484ec.png)
+![image](https://user-images.githubusercontent.com/78290169/155998112-3f4f215c-188b-4296-95da-26824d504053.png)
 
 - Login page:
 
