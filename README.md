@@ -33,7 +33,7 @@ If a user have purchase the items in the cart, then user can check their order i
 ![image](https://user-images.githubusercontent.com/78290169/155998806-a226eb77-e0d9-46c0-89d4-8e4e4234566e.png)
 ![image](https://user-images.githubusercontent.com/78290169/155998829-a3015686-52be-455f-8e3f-c2cfbaa562fe.png)
 
-- Add Cash:
+- Add Cash: <br>
 User can add any amount of cash that they would like to add by input the amount of cash in the input box and it will update immediately
 ![image](https://user-images.githubusercontent.com/78290169/155998860-23e4064f-5f41-4a1e-b7b8-4d5ca1427c1a.png)
 
