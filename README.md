@@ -21,11 +21,7 @@ If user have their own account, then the user can login their own account, it wi
 ![image](https://user-images.githubusercontent.com/78290169/155998250-74ea6e4c-82cf-4763-87df-06e8d9ea436d.png)
 
 - Add to Cart: <br>
-After user have login their account, user can add any product to the cart if they are interested in that product by clicking 'Add to Cart' button for that product and it will shows a sucessful message about added to the cart.
-
-If a user would like to buy the product in the cart then they can click 'Confirm Purchase' for purchase all items in the cart or user can click 'Remove' if they would like to remove the product in the cart. 
-
-Also, if a user do not have enoguh money to buy it, it will show a failure message to tell the user.
+After user have login their account, user can add any product to the cart if they are interested in that product by clicking 'Add to Cart' button for that product and it will shows a sucessful message about added to the cart. If a user would like to buy the product in the cart then they can click 'Confirm Purchase' for purchase all items in the cart or user can click 'Remove' if they would like to remove the product in the cart.  Also, if a user do not have enoguh money to buy it, it will show a failure message to tell the user.
 ![image](https://user-images.githubusercontent.com/78290169/155998766-39f182f6-9c9d-4386-9a38-b0e303687279.png)
 
 - History page: <br>
