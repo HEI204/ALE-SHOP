@@ -8,7 +8,7 @@ Also, admin/manager can also use their pre-registered account to login in order 
 ## Introduction
 
 ### User page
-- index page: 
+- index page: <br>
 For the index page, it will show all the product that are available on the website and allow user to click 'Add to Cart' or click 'More Info' for each product.
 ![image](https://user-images.githubusercontent.com/78290169/155998032-f329b304-4be7-470f-8d8f-73d1273e3438.png)
 
