@@ -20,7 +20,7 @@ If a user do not have their own account, then the user need to create their own 
 - Login page:
 
 If user have their own account, then the user can login their own account, it will check for the existance for the username that you input and correctness for the password with that username
-![image](https://user-images.githubusercontent.com/78290169/148876248-1104f652-c31f-474b-a3a0-e0c24fc1ff7d.png)
+![image](https://user-images.githubusercontent.com/78290169/155998250-74ea6e4c-82cf-4763-87df-06e8d9ea436d.png)
 
 - Add to Cart:
 
@@ -29,18 +29,18 @@ After user have login their account, user can add any product to the cart if the
 If a user would like to buy the product in the cart then they can click 'Confirm Purchase' for purchase all items in the cart or user can click 'Remove' if they would like to remove the product in the cart. 
 
 Also, if a user do not have enoguh money to buy it, it will show a failure message to tell the user.
-![image](https://user-images.githubusercontent.com/78290169/148876438-928edfb4-4720-474c-9cba-2df1d4779e23.png)
+![image](https://user-images.githubusercontent.com/78290169/155998766-39f182f6-9c9d-4386-9a38-b0e303687279.png)
 
 - History page:
 
 If a user have purchase the items in the cart, then user can check their order information on the history page. Also, user can click 'View Detail' to check what product they have bought for that order
-![image](https://user-images.githubusercontent.com/78290169/148876899-70cb7a1f-19c0-4021-b269-20d88689220b.png)
-![image](https://user-images.githubusercontent.com/78290169/148876952-cb0e0bde-5e33-4ca6-afb7-1172d27954fd.png)
+![image](https://user-images.githubusercontent.com/78290169/155998806-a226eb77-e0d9-46c0-89d4-8e4e4234566e.png)
+![image](https://user-images.githubusercontent.com/78290169/155998829-a3015686-52be-455f-8e3f-c2cfbaa562fe.png)
 
 - Add Cash:
 
 User can add any amount of cash that they would like to add by input the amount of cash in the input box and it will update immediately
-![image](https://user-images.githubusercontent.com/78290169/148876836-07e668a0-e2cd-4799-a504-f07de9af384b.png)
+![image](https://user-images.githubusercontent.com/78290169/155998860-23e4064f-5f41-4a1e-b7b8-4d5ca1427c1a.png)
 
 ## Reference:
 - <a href="https://youtu.be/Qr4QMBUPxWo">Flask Course - Python Web Application Development</a> (Inspiration from this video and take reference about the page design)
