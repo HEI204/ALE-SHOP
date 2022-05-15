@@ -4,15 +4,15 @@
         <style>
             .container {
                 text-align: center;
-                 margin-top:50px;
+                 margin-top: 50px;
             }
 
-            .container h1 {
-                text-align: left;
+            .container hr {
+                margin-top: 20px;
+                margin-bottom: 50px;
             }
 
             table {
-                margin-top: 30px;
                 text-align: center;
             }
 
@@ -50,7 +50,6 @@
                 <tr>
                     <th scope="col">Product Name</th>
                     <th scope="col">Price (HKD)</th>
-                    <th scope="col">Discount (%)</th>
                     <th scope="col" colspan="2">Action</th>
                 </tr>
             </thead>
@@ -60,7 +59,6 @@
                 <tr>
                     <td>{{ item["name"] }}</td>
                     <td>${{ item["price"] }} </td>
-                    <td>{{ (item["discount"]*100) }}% </td>
                     <td>
                         <a href="{{ url_for('cart', remove_product_id=item["id"])}}" class="btn btn-outline btn-info" role="button" aria-disabled="true">Remove</a>
                     </td>
@@ -72,7 +70,6 @@
                 <tr class="table-secondary" style="color:black;">
                     <td>Total Price (HKD)</td>
                     <td>${{ cart_total_price }}</td>
-                    <td></td>
                     <td></td>
                 </tr>
             </tfoot>

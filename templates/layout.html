@@ -38,10 +38,11 @@
                                 <a class="nav-link" href="/admin">Admin Dashboard</a>
                             </li>
                         {% endif %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                        </li>
+
                         {% if (session.username != "admin" and session.username) %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                            </li>
                             <li class="nav-item"><a class="nav-link" href="/cart">Cart</a></li>
                             <li class="nav-item"><a class="nav-link" href="/history">History</a></li>
                             <li class="nav-item"><a class="nav-link" href="/add_cash">Add Cash</a></li>

@@ -4,11 +4,12 @@
         <style>
             .container {
                 text-align: center;
-                margin-top:50px;
+                 margin-top: 50px;
             }
 
-            .container h1 {
-                text-align: left;
+            .container hr {
+                margin-top: 20px;
+                margin-bottom: 50px;
             }
 
             .container a[href="/add_product"] {
@@ -39,7 +40,6 @@
                 <tr>
                     <th scope="col">Product Name</th>
                     <th scope="col">Price (HKD)</th>
-                    <th scope="col">Discount (%)</th>
                     <th scope="col">Stocks</th>
                     <th scope="col" colspan="2">Action</th>
                 </tr>
@@ -50,7 +50,6 @@
                 <tr>
                     <td>{{ product["name"] }}</td>
                     <td>${{ product["price"] }} </td>
-                    <td>{{ (product["discount"]*100) }}% </td>
                     <td>{{ product["stock"] }} </td>
                     <td>
                         <a href="{{ url_for('update_product_info', selected_product_name=product["name"])}}" class="btn btn-outline btn-info" role="button" aria-disabled="true">Update</a>

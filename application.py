@@ -86,7 +86,7 @@ def cart():
     user_cash = user_info["cash"]
 
     # Query all the items currently inside the cart
-    cart_items = db.execute("SELECT cart.id, name, products.price, discount FROM products JOIN cart ON cart.product_id = products.id WHERE cart.user_id = ?",
+    cart_items = db.execute("SELECT cart.id, name, products.price FROM products JOIN cart ON cart.product_id = products.id WHERE cart.user_id = ?",
                  user_info["id"])
 
     # Sum up the total price for all items in the cart
@@ -112,7 +112,6 @@ def buy():
     cart_total_price = 0
     for item in cart_items:
         cart_total_price += item["price"]
-
     new_user_cash = user_cash - cart_total_price
     if new_user_cash < 0:
         flash("You do not have enough cash to buy all product inside the cart", category='danger')
@@ -233,11 +232,6 @@ def add_product():
         return flash("You should input the product price", category='danger')
 
     try:
-        product_discount = float(request.form.get("product_discount"))
-    except ValueError:
-        return flash("You should input the product discount", category='danger')
-
-    try:
         product_stocks = int(request.form.get("product_stocks"))
     except ValueError:
         flash("You should input the product stocks", category='danger')
@@ -295,11 +289,6 @@ def update_product_info():
         new_product_price = float(request.form.get("new_product_price"))
     except ValueError:
         return flash("You should input the product price", category='danger')
-
-    try:
-        new_product_discount = float(request.form.get("new_product_discount"))
-    except ValueError:
-        return flash("You should input the product discount", category='danger')
 
     try:
         new_product_stocks = int(request.form.get("new_product_stocks"))

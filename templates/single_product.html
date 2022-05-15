@@ -29,9 +29,6 @@
                 <h5>Product Name: {{ product_info["name"] }}</h5>
                 <hr>
                 <p>Price(HKD): ${{ product_info["price"] }}</p>
-                {% if product_info["discount"] > 0 %}
-                    <p>Discount: {{ product_info["discount"]*100 }}%</p>
-                {% endif %}
                 <p>
                     <span>Product Description:</span><br>
                     {{ product_info["description"] }}
