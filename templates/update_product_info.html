@@ -1,57 +1,66 @@
 {% extends "layout.html" %}
 
+{% block style %}
+        <style>
+            h1 {
+                text-align: center;
+            }
+
+            label {
+                text-align: left;
+                display: block;
+            }
+        </style>
+{% endblock %}
+
 {% block title %}
     Update Product
 {% endblock %}
 
 {% block content %}
-    <body class="text-center">
         <div class="container">
-            <form action="{{ url_for('update_product_info', selected=product) }}" method="post">
-                <br>
-                <h1 class="h3 mb-3 font-weight-normal">
-                Update Product Information
-                </h1>
-                <br>
+        <form action="{{ url_for('update_product_info', selected=product) }}" method="post">
+            <br>
+            <h1 class="h3 mb-3 font-weight-normal">Update Product Information</h1>
+            <br>
 
-                <p><h6 style="text-align:left;">Product Name: </h6></p>
-                <div class="form-group text-left">
-                    <select name="product" style="width:200px; height:40px; text-align:left;" >
-                        <option selected disabled>Product Name</option>
-                        {% for product in current_product %}
-                            {% if product["name"] == update_product_name %}
-                                <option selected>{{ product["name"] }}</option>
-                            {% else %}
-                                <option>{{ product["name"] }}</option>
-                            {% endif %}
-                        {% endfor %}
-                    </select>
-                </div>
+            <div class="form-group text-left">
+                <label for="product">Product Name:</label>
+                <select name="product" id="product" style="width:200px; height:40px; text-align:left;" >
+                    <option selected disabled>Product Name</option>
+                    {% for product in current_product %}
+                        {% if product["name"] == update_product_name %}
+                            <option selected>{{ product["name"] }}</option>
+                        {% else %}
+                            <option>{{ product["name"] }}</option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+            </div>
 
-                {% for product in current_product %}
-                    {% if product["name"] == update_product_name %}
-                        <p><h6 style="text-align:left;">Price: </h6></p>
-                        <div class="form-group">
-                            <input autocomplete="off" class="form-control" name="new_product_price" placeholder="Update Product Price" type="number" value={{ product["price"] }}>
-                        </div>
+            {% for product in current_product %}
+                {% if product["name"] == update_product_name %}
+                    <div class="form-group">
+                        <label for="new_product_price">Price:</label>
+                        <input autocomplete="off" class="form-control" name="new_product_price" id="new_product_price" placeholder="Update Product Price" type="number" value={{ product["price"] }}>
+                    </div>
 
-                        <p><h6 style="text-align:left;">Discount: </h6></p>
-                        <div class="form-group">
-                            <input autocomplete="off" class="form-control" name="new_product_discount" placeholder="Update Product Discount" type="text" value={{ product["discount"] }}>
-                        </div>
+                    <div class="form-group">
+                        <label for="new_product_discount">Discount:</label>
+                        <input autocomplete="off" class="form-control" name="new_product_discount" id="new_product_discount" placeholder="Update Product Discount" type="text" value={{ product["discount"] }}>
+                    </div>
 
-                        <p><h6 style="text-align:left;">Stock: </h6></p>
-                        <div class="form-group">
-                            <input autocomplete="off" class="form-control" name="new_product_stocks" placeholder="Update Product Stock" type="integer" value={{ product["stock"] }}>
-                        </div>
+                    <div class="form-group">
+                        <label for="new_product_stocks">Discount:</label>
+                        <input autocomplete="off" class="form-control" name="new_product_stocks" id="new_product_stocks" placeholder="Update Product Stock" type="integer" value={{ product["stock"] }}>
+                    </div>
 
-                        <p><h6 style="text-align:left;">New Description: </h6></p>
-                        <div class="form-group" style="text-align:left;">
-                            <textarea name="new_description" rows="5" cols="130">{{ product["description"] }}</textarea>
-                        </div>
-                    {% endif %}
-                {% endfor %}
-                <button class="btn btn-lg btn-block btn-primary" type="submit">Update</button>
-                <br>
+                    <div class="form-group" style="text-align:left;">
+                        <label for="new_description">New Description:</label>
+                        <textarea name="new_description" id="new_description" rows="5" cols="120">{{ product["description"] }}</textarea>
+                    </div>
+                {% endif %}
+            {% endfor %}
+            <button class="btn btn-lg btn-block btn-primary" type="submit">Update</button>
         </div>
 {% endblock %}

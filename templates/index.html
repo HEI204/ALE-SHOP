@@ -1,8 +1,25 @@
 {% extends "layout.html" %}
 
-{% block title %}
-    Market
+{% block style %}
+        <style>
+            .row {
+                color:black;
+                margin-top:50px;
+            }
+
+            .card {
+                margin: 20px;
+                position: relative;
+                left: 50px;
+            }
+
+            .card {
+                width: 18rem;
+            }
+        </style>
 {% endblock %}
+
+{% block title %}Market{% endblock %}
 
 {% block money %}
     {% if user_cash != 0 %}
@@ -13,21 +30,21 @@
 {% endblock %}
 
 {% block content %}
-        <div class="row" style="color:black; margin-top:50px;">
+        <div class="row">
             {% for product in market_info %}
             <div class="cards">
-                <div class="card" style="width: 18rem;">
+                <div class="card">
                     <img class="card-img-top" src="static/images/{{ product["name"] }}.jpg" alt="{{product["name"]}}" width="150" height="250">
                     <div class="card-body">
                         <h6>{{ product["name"] }}</h6>
                         <p>Price: $ {{ product["price"] }}</p>
                     </div>
+
                     <div class="card-footer">
                         <a href="{{ url_for('add_to_cart', product=product["name"])}}" class="btn btn-warning" role="button">Add to Cart</a>
                         <a href="{{ url_for('single_product', product=product["name"])}}" class="btn btn-info" role="button">More Info</a>
                     </div>
                 </div>
-                <br>
             </div>
             {% endfor %}
         </div>

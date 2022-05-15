@@ -1,8 +1,24 @@
 {% extends "layout.html" %}
 
-{% block title %}
-    Transaction Record
+{% block style %}
+        <style>
+            h1 {
+                position: relative;
+                left: 10px;
+            }
+
+            table {
+                text-align: center;
+            }
+
+            thead{
+                background-color: black;
+                color: white;
+            }
+        </style>
 {% endblock %}
+
+{% block title %}Transaction Record{% endblock %}
 
 {% block money %}
     {% if user_cash != 0 %}
@@ -14,32 +30,31 @@
 
 {% block content %}
     <br>
-    <h1 class="h3 mb-3 font-weight-normal" style="position: relative; left: 10px;">
+    <h1 class="h3 mb-3 font-weight-normal">
     Transaction Record
     </h1>
     <br>
-    <table class="table table-hover table-dark" >
+    <table class="table">
         <thead>
             <tr>
-                <th scope="col" style="text-align:center">Order ID</th>
-                <th scope="col" style="text-align:center">Total Price (HKD)</th>
-                <th scope="col" style="text-align:center">Time (HK Time)</th>
-                <th scope="col" colspan="2" style="text-align:center">Action</th>
+                <th scope="col">Order ID</th>
+                <th scope="col">Total Price (HKD)</th>
+                <th scope="col">Time (HK Time)</th>
+                <th scope="col" colspan="2">Action</th>
             </tr>
         </thead>
 
         <tbody>
             {% for record in transaction_info %}
             <tr>
-                <td style="text-align:center"> {{ record["order_id"] }}</td>
-                <td style="text-align:center"> ${{ record["total_price"] }}</td>
-                <td style="text-align:center"> {{ record["timestamp"] }} </td>
-                <td style="text-align:center">
+                <td>{{ record["order_id"] }}</td>
+                <td>${{ record["total_price"] }}</td>
+                <td>{{ record["timestamp"] }}</td>
+                <td>
                     <a href="{{ url_for('order_info', order_id=record["order_id"])}}" class="btn btn-outline btn-info" role="button" aria-disabled="true">View Detail</a>
                 </td>
             </tr>
             {% endfor %}
-
         </tbody>
     </table>
 {% endblock %}

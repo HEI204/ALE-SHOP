@@ -1,8 +1,36 @@
 {% extends "layout.html" %}
 
-{% block title %}
-    Cart
+{% block style %}
+        <style>
+            h1 {
+                position: relative;
+                left: 10px;
+            }
+
+            table {
+                text-align: center;
+            }
+
+            thead {
+                background-color: black;
+                color: white;
+            }
+
+            tfoot tr td:first-child {
+                font-weight: bold;
+            }
+
+            tfoot tr td:nth-child(2)::after {
+                content: 123;
+            }
+
+            div {
+                text-align:center;
+            }
+        </style>
 {% endblock %}
+
+{% block title %}Cart{% endblock %}
 
 {% block money %}
     {% if user_cash != 0 %}
@@ -14,41 +42,42 @@
 
 {% block content %}
     <br>
-    <h1 class="h3 mb-3 font-weight-normal" style="position: relative; left: 10px;">
-    Cart
-    </h1>
+    <h1 class="h3 mb-3 font-weight-normal">Cart</h1>
     <br>
-    <table class="table table-hover table-dark" >
+    <table class="table">
         <thead>
             <tr>
-                <th scope="col" style="text-align:center">Product Name</th>
-                <th scope="col" style="text-align:center">Price (HKD)</th>
-                <th scope="col" style="text-align:center">Discount (%)</th>
-                <th scope="col" colspan="2" style="text-align:center">Action</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Price (HKD)</th>
+                <th scope="col">Discount (%)</th>
+                <th scope="col" colspan="2">Action</th>
             </tr>
         </thead>
 
         <tbody>
             {% for item in cart_items %}
             <tr>
-                <td style="text-align:center"> {{ item["name"] }}</td>
-                <td style="text-align:center"> ${{ item["price"] }} </td>
-                <td style="text-align:center"> {{ (item["discount"]*100) }}% </td>
-                <td style="text-align:center">
+                <td>{{ item["name"] }}</td>
+                <td>${{ item["price"] }} </td>
+                <td>{{ (item["discount"]*100) }}% </td>
+                <td>
                     <a href="{{ url_for('cart', remove_product_id=item["id"])}}" class="btn btn-outline btn-info" role="button" aria-disabled="true">Remove</a>
                 </td>
             </tr>
             {% endfor %}
-
-            <tr class="table-secondary" style="color:black;">
-                <th scope="row" colspan="1" style="text-align:center">Total Price (HKD)</th>
-                <td style="text-align:center">${{ cart_total_price }}</td>
-                <td style="text-align:center"></td>
-                <td style="text-align:center"></td>
-            </tr>
         </tbody>
+
+        <tfoot>
+            <tr class="table-secondary" style="color:black;">
+                <td>Total Price (HKD)</td>
+                <td>${{ cart_total_price }}</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tfoot>
     </table>
-    <div style="position:relative; text-align:center;">
-    <a href="/buy" class="btn btn-outline btn-lg btn-info" role="button" aria-disabled="true">Confirm Purchase</a>
+
+    <div>
+        <a href="/buy" class="btn btn-outline btn-lg btn-info" role="button" aria-disabled="true">Confirm Purchase</a>
     </div>
 {% endblock %}

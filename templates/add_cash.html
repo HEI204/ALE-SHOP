@@ -1,8 +1,26 @@
 {% extends "layout.html" %}
 
-{% block title %}
-    Add Cash
+{% block style %}
+        <style>
+            h5 {
+                margin-top:50px;
+                font-size:25px;
+                margin-bottom: 30px;
+            }
+
+            hr {
+                background: linear-gradient(to right, red, yellow);
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .form-group {
+                margin-bottom: 25px;
+            }
+        </style>
 {% endblock %}
+
+{% block title %}Add Cash{% endblock %}
 
 {% block money %}
     {% if user_cash != 0 %}
@@ -14,14 +32,12 @@
 
 {% block content %}
     <div class="container">
+        <h5>Current Amount of Cash: ${{ user_cash }}</h5>
         <form action="/add_cash" method="post">
-            <h5><p style="margin-top:50px; font-size:25px">Current Amount of Cash: ${{ user_cash }}</p></h5>
-            <br>
-            <p><h6 style="text-align:left;">Add Cash: </h6></p>
             <div class="form-group">
-                <input autocomplete="off" class="form-control" name="added_cash" placeholder="Add Cash" type="text">
+                <label for="added_cash">Add Cash: </label>
+                <input autocomplete="off" class="form-control" name="added_cash" id="added_cash" placeholder="Add Cash" type="text">
             </div>
-            <br>
             <button class="btn btn-lg btn-block btn-primary" type="submit">Add</button>
         </form>
     </div>

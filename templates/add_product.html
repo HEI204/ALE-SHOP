@@ -1,47 +1,54 @@
 {% extends "layout.html" %}
 
-{% block title %}
-    Add Product
+{% block style %}
+        <style>
+            label {
+                display: block;
+                text-align:left;
+            }
+
+            .form-group {
+                text-align: left;
+            }
+        </style>
 {% endblock %}
+
+{% block title %}Add Product{% endblock %}
 
 {% block content %}
     <body class="text-center">
         <div class="container">
             <form action="/add_product" method="post">
                 <br>
-                <h1 class="h3 mb-3 font-weight-normal">
-                Add new product
-                </h1>
+                <h1 class="h3 mb-3 font-weight-normal">Add new product</h1>
                 <br>
 
-                <p><h6 style="text-align:left;">Name: </h6></p>
                 <div class="form-group">
-                    <input autocomplete="off" class="form-control" name="product_name" placeholder="Add Product Name" type="text">
+                    <label for="product_name">Name:</label>
+                    <input autocomplete="off" class="form-control" name="product_name" id="product_name" placeholder="Add Product Name" type="text">
                 </div>
 
-                <p><h6 style="text-align:left;">Price: </h6></p>
                 <div class="form-group">
-                    <input autocomplete="off" class="form-control" name="product_price" placeholder="Add Product Price" type="number">
+                    <label for="product_price">Price:</label>
+                    <input autocomplete="off" class="form-control" name="product_price" id="product_price" placeholder="Add Product Price" type="number">
                 </div>
 
-                <p><h6 style="text-align:left;">Discount: </h6></p>
                 <div class="form-group">
-                    <input autocomplete="off" class="form-control" name="product_discount" placeholder="Add Product Discount" type="number">
+                    <label for="product_discount">Discount:</label>
+                    <input autocomplete="off" class="form-control" name="product_discount" id="product_discount" placeholder="Add Product Discount" type="number">
                 </div>
 
-                <p><h6 style="text-align:left;">Stock: </h6></p>
                 <div class="form-group">
-                    <input autocomplete="off" class="form-control" name="product_stocks" placeholder="Add Product Stock" type="integer">
+                    <label for="product_discount">Stock:</label>
+                    <input autocomplete="off" class="form-control" name="product_stocks" id="product_stocks" placeholder="Add Product Stock" type="integer">
                 </div>
 
-                <p><h6 style="text-align:left;">Description: </h6></p>
-                <div class="form-group" style="text-align:left;">
-                    <textarea name="description" rows="5" cols="140"></textarea>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea name="description" rows="5" cols="120"></textarea>
                 </div>
-
-                <button class="btn btn-lg btn-block btn-primary" type="submit">Add</button>
-                <br>
             </form>
+            <button class="btn btn-lg btn-block btn-primary" type="submit">Add</button>
         </div>
     </body>
 {% endblock %}
