@@ -2,18 +2,13 @@
 
 {% block style %}
         <style>
-            h5 {
-                margin-top:50px;
-                font-size:25px;
-                margin-bottom: 30px;
+            h1 {
+                margin-top: 50px;
             }
 
             hr {
-                background: linear-gradient(to right, red, yellow);
-                width: 100%;
-                margin-bottom: 10px;
+                margin-bottom: 30px;
             }
-
             .form-group {
                 margin-bottom: 25px;
             }
@@ -32,13 +27,14 @@
 
 {% block content %}
     <div class="container">
-        <h5>Current Amount of Cash: ${{ user_cash }}</h5>
+        <h1 class="h3 mb-3 font-weight-normal">Current Amount of Cash: ${{ user_cash }}</h1>
+        <hr>
         <form action="/add_cash" method="post">
             <div class="form-group">
-                <label for="added_cash">Add Cash: </label>
+                <label for="added_cash">Cash To Be Add: </label>
                 <input autocomplete="off" class="form-control" name="added_cash" id="added_cash" placeholder="Add Cash" type="text">
             </div>
-            <button class="btn btn-lg btn-block btn-primary" type="submit">Add</button>
+            <button class="btn btn-sm btn-block btn-primary" type="submit">Add</button>
         </form>
     </div>
 {% endblock %}

@@ -1,8 +1,24 @@
 {% extends "layout.html" %}
 
-{% block title %}
-    Order Info
+{% block style %}
+        <style>
+            .container {
+                text-align: center;
+                margin-top:50px;
+            }
+
+            .container h1 {
+                text-align: left;
+            }
+
+            thead {
+                background-color: black;
+                color: white;
+            }
+        </style>
 {% endblock %}
+
+{% block title %}Order Info{% endblock %}
 
 {% block money %}
     {% if user_cash != 0 %}
@@ -13,13 +29,10 @@
 {% endblock %}
 
 {% block content %}
-    <br>
-    <div class="container" style="margin-top:50px;">
-        <h1 class="h3 mb-3 font-weight-normal" style="position: relative; left: 10px;">
-        Order Info: {{ order_id }}
-        </h1>
-        <br>
-        <table class="table table-hover table-dark" >
+    <div class="container">
+        <h1 class="h3 mb-3 font-weight-normal">Order Info: {{ order_id }}</h1>
+        <hr>
+        <table class="table table-hover" >
             <thead>
                 <tr>
                     <th scope="col" style="text-align:center">Product Name</th>
@@ -36,8 +49,7 @@
                 {% endfor %}
             </tbody>
         </table>
-        <div style="text-align:center">
+
         <a href="/history" class="btn btn-outline btn-info" role="button">Back to History</a>
-        </div>
     </div>
 {% endblock %}
