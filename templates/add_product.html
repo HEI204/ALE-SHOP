@@ -1,26 +1,7 @@
 {% extends "layout.html" %}
 
 {% block style %}
-        <style>
-            .container {
-                text-align: center;
-                 margin-top: 50px;
-            }
-
-            .container hr {
-                margin-top: 20px;
-                margin-bottom: 50px;
-            }
-
-            label {
-                display: block;
-                text-align:left;
-            }
-
-            .form-group {
-                text-align: left;
-            }
-        </style>
+<link href="{{ url_for('static', filename='styles/add_product.css')}}" rel="stylesheet">
 {% endblock %}
 
 {% block title %}Add Product{% endblock %}

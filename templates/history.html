@@ -1,26 +1,7 @@
 {% extends "layout.html" %}
 
 {% block style %}
-        <style>
-            .container {
-                text-align: center;
-                 margin-top: 50px;
-            }
-
-            .container hr {
-                margin-top: 20px;
-                margin-bottom: 50px;
-            }
-
-            table {
-                text-align: center;
-            }
-
-            thead{
-                background-color: black;
-                color: white;
-            }
-        </style>
+<link href="{{ url_for('static', filename='styles/history.css')}}" rel="stylesheet">
 {% endblock %}
 
 {% block title %}Transaction Record{% endblock %}

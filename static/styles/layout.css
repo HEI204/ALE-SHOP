@@ -1,0 +1,9 @@
+#money {
+    font-weight: bold;
+    pointer-events: none;
+}
+
+#welcome {
+    pointer-events: none;
+}
+

@@ -1,16 +1,17 @@
 {% extends "layout.html" %}
 
+{% block style %}
+<link href="{{ url_for('static', filename='styles/register.css')}}" rel="stylesheet">
+{% endblock %}
+
 {% block title %}Register{% endblock %}
 
 {% block content %}
     <body class="text-center">
         <div class="container">
+            <img class="mb-4" src="/static/images/image.png" alt="logo">
+            <h1 class="h3 mb-3 font-weight-normal">Please Create Your Account</h1>
             <form action="/register" method="post">
-                <br>
-                <img class="mb-4" src="/static/images/image.png" alt="logo">
-                <h1 class="h3 mb-3 font-weight-normal">Please Create Your Account</h1>
-                <br>
-
                 <div class="form-group">
                     <input autocomplete="off" class="form-control" name="username" placeholder="Username" type="text">
                 </div>
@@ -27,7 +28,6 @@
                     <input autocomplete="off" class="form-control" name="confirmation" placeholder="Confirm Password" type="password">
                 </div>
                 <button class="btn btn-lg btn-block btn-primary" type="submit">Create Account</button>
-                <br>
             </form>
             <a href="/login"><h6>Already have an account?</h6></a>
         </div>

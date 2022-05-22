@@ -1,0 +1,8 @@
+.container img {
+    margin-top: 50px;
+}
+
+.container h1 {
+    position: relative;
+    top: -20px;
+}

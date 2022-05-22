@@ -1,0 +1,26 @@
+.container {
+    text-align: center;
+     margin-top: 50px;
+}
+
+.container hr {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+table {
+    text-align: center;
+}
+
+thead {
+    background-color: black;
+    color: white;
+}
+
+tfoot tr td:first-child {
+    font-weight: bold;
+}
+
+tfoot tr td:nth-child(2)::after {
+    content: 123;
+}

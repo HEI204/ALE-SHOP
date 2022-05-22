@@ -1,31 +1,7 @@
 {% extends "layout.html" %}
 
 {% block style %}
-        <style>
-            .container {
-                text-align: center;
-                 margin-top: 50px;
-            }
-
-            .container hr {
-                margin-top: 20px;
-                margin-bottom: 50px;
-            }
-
-            .container a[href="/add_product"] {
-                display: block;
-                margin-top: 25px;
-            }
-
-            table {
-                text-align: center;
-            }
-
-            thead {
-                background-color: black;
-                color: white;
-            }
-        </style>
+<link href="{{ url_for('static', filename='styles/admin.css')}}" rel="stylesheet">
 {% endblock %}
 
 {% block title %}Admin Dashboard{% endblock %}
