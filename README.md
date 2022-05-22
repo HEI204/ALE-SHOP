@@ -10,19 +10,24 @@ Also, admin/manager can also use their pre-registered account to login in order 
 ### User page
 - index page: <br>
 For the index page, it will show all the product that are available on the website and allow user to click 'Add to Cart' or click 'More Info' for each product.
-![image](https://user-images.githubusercontent.com/78290169/168472489-eaaa337f-167a-40b8-891d-5ce0e50e67ce.png)
+![image](https://user-images.githubusercontent.com/78290169/169677981-bf16a426-ea98-4e54-88e1-19aad7f08d48.png)
 
 - Register page: <br>
 If a user do not have their own account, then the user need to create their own account, it will also check for the uniqueness of the username, validation for password and email in order to avoid any error during registration
-![image](https://user-images.githubusercontent.com/78290169/168472485-22e5a182-54e7-458e-a79c-47b9f1e783b8.png)
+![image](https://user-images.githubusercontent.com/78290169/169677986-d5eb2522-fd47-4ece-a73a-c27393f7e34c.png)
 
 - Login page: <br>
 If user have their own account, then the user can login their own account, it will check for the existance for the username that you input and correctness for the password with that username
-![image](https://user-images.githubusercontent.com/78290169/168472496-d3fde21b-30b4-4777-b073-0370f712afa2.png)
+![image](https://user-images.githubusercontent.com/78290169/169677993-e99b877f-c5b2-4aed-afe9-7f2f8fc5a291.png)
 
 - Add to Cart: <br>
 After user have login their account, user can add any product to the cart if they are interested in that product by clicking 'Add to Cart' button for that product and it will shows a sucessful message about added to the cart. If a user would like to buy the product in the cart then they can click 'Confirm Purchase' for purchase all items in the cart or user can click 'Remove' if they would like to remove the product in the cart.  Also, if a user do not have enoguh money to buy it, it will show a failure message to tell the user.
 ![image](https://user-images.githubusercontent.com/78290169/168472507-abe453cc-4cf6-47d1-ac5d-09e64d5da6d1.png)
+
+- Product info page: <br>
+After user clicked the button "More Info" for the product in index page, it will redirect to another page which have more detail information regarding to that product
+![image](https://user-images.githubusercontent.com/78290169/169678056-cdb8eba8-d1e4-4e0e-8e76-6dd57f874fd2.png)
+
 
 - History page: <br>
 If a user have purchase the items in the cart, then user can check their order information on the history page. Also, user can click 'View Detail' to check what product they have bought for that order
