@@ -26,7 +26,7 @@ After user have login their account, user can add any product to the cart if the
 
 - Product info page: <br>
 After user clicked the button "More Info" for the product in index page, it will redirect to another page which have more detail information regarding to that product
-![image](https://user-images.githubusercontent.com/78290169/169678056-cdb8eba8-d1e4-4e0e-8e76-6dd57f874fd2.png)
+![image](https://user-images.githubusercontent.com/78290169/169678082-dae95578-550b-4af6-ba9d-bf1ed6c05959.png)
 
 
 - History page: <br>
