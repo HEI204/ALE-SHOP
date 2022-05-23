@@ -16,3 +16,7 @@ label {
 .form-group {
     text-align: left;
 }
+
+textarea {
+    width: 100%;
+}

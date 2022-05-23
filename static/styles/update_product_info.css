@@ -12,3 +12,7 @@ label {
     text-align: left;
     display: block;
 }
+
+textarea {
+    width: 100%;
+}
