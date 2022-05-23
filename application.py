@@ -158,6 +158,11 @@ def admin():
 
     # User reached route via GET (as by clicking a link or via redirect)
     if request.method == "GET":
+        # Only admin able to add new product
+        if session["username"] != 'admin':
+            flash("Sorry, you do not have permission to access admin page", category='danger')
+            return redirect("/")
+
         # Show the market info for our shop to the admin
         market_info = db.execute("SELECT * FROM products")
         return render_template("admin.html", market_info=market_info)
@@ -219,6 +224,11 @@ def add_product():
 
     # User reached route via GET (as by clicking a link or via redirect)
     if request.method == "GET":
+        # Only admin able to add new product
+        if session["username"] != 'admin':
+            flash("Sorry, you do not have permission to access this page", category='danger')
+            return redirect("/")
+
         return render_template("add_product.html")
 
     # User reached route via POST (as by submitting a form via POST)
@@ -270,6 +280,11 @@ def update_product_info():
 
     # User reached route via GET (as by clicking a link or via redirect)
     if request.method == "GET":
+        # Only admin able to update product info
+        if session["username"] != 'admin':
+            flash("Sorry, you do not have permission to access this page", category='danger')
+            return redirect("/")
+
         current_product = db.execute("SELECT * FROM products")
 
         temp = request.args.get("selected_product_name")
