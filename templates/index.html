@@ -27,7 +27,7 @@
                             <p>Price: $ {{ product["price"] }}</p>
                         </div>
 
-                        <div class="card-footer">
+                        <div class="card-footer px-3 text-center">
                             <a href="{{ url_for('add_to_cart', product=product["name"])}}" class="btn btn-warning" role="button">Add to Cart</a>
                             <a href="{{ url_for('single_product', product=product["name"])}}" class="btn btn-info" role="button">More Info</a>
                         </div>
