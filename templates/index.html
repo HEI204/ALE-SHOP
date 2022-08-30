@@ -15,22 +15,25 @@
 {% endblock %}
 
 {% block content %}
-        <div class="row">
+    <div class="container-fluid">
+        <div class="row g-3">
             {% for product in market_info %}
-            <div class="cards">
-                <div class="card">
-                    <img class="card-img-top" src="static/images/{{ product["name"] }}.jpg" alt="{{product["name"]}}" width="150" height="250">
-                    <div class="card-body">
-                        <h6>{{ product["name"] }}</h6>
-                        <p>Price: $ {{ product["price"] }}</p>
-                    </div>
+                <div class="col-12 col-md-6 col-xl-3 mb-5">
+                    <div class="card">
+                        <img class="card-img-top" src="static/images/{{ product["name"] }}.jpg" alt="{{product["name"]}}" width="640" height="640">
+                        <hr>
+                        <div class="card-body">
+                            <h6>{{ product["name"] }}</h6>
+                            <p>Price: $ {{ product["price"] }}</p>
+                        </div>
 
-                    <div class="card-footer">
-                        <a href="{{ url_for('add_to_cart', product=product["name"])}}" class="btn btn-warning" role="button">Add to Cart</a>
-                        <a href="{{ url_for('single_product', product=product["name"])}}" class="btn btn-info" role="button">More Info</a>
+                        <div class="card-footer">
+                            <a href="{{ url_for('add_to_cart', product=product["name"])}}" class="btn btn-warning" role="button">Add to Cart</a>
+                            <a href="{{ url_for('single_product', product=product["name"])}}" class="btn btn-info" role="button">More Info</a>
+                        </div>
                     </div>
                 </div>
-            </div>
             {% endfor %}
         </div>
+    </div>
 {% endblock %}

@@ -15,40 +15,37 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <h1 class="h3 mb-3 font-weight-normal">Cart</h1>
-        <hr>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Product Name</th>
-                    <th scope="col">Price (HKD)</th>
-                    <th scope="col" colspan="2">Action</th>
-                </tr>
-            </thead>
+    <h1 class="h3 mb-3 font-weight-normal">Cart</h1>
+    <hr>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Product Name</th>
+                <th scope="col">Price (HKD)</th>
+                <th scope="col" colspan="2">Action</th>
+            </tr>
+        </thead>
 
-            <tbody>
-                {% for item in cart_items %}
-                <tr>
-                    <td>{{ item["name"] }}</td>
-                    <td>${{ item["price"] }} </td>
-                    <td>
-                        <a href="{{ url_for('cart', remove_product_id=item["id"])}}" class="btn btn-outline btn-info" role="button" aria-disabled="true">Remove</a>
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
+        <tbody>
+            {% for item in cart_items %}
+            <tr>
+                <td>{{ item["name"] }}</td>
+                <td>${{ item["price"] }} </td>
+                <td>
+                    <a href="{{ url_for('cart', remove_product_id=item["id"])}}" class="btn btn-outline btn-info" role="button" aria-disabled="true">Remove</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
 
-            <tfoot>
-                <tr class="table-secondary" style="color:black;">
-                    <td>Total Price (HKD)</td>
-                    <td>${{ cart_total_price }}</td>
-                    <td></td>
-                </tr>
-            </tfoot>
-        </table>
+        <tfoot>
+            <tr class="table-secondary" style="color:black;">
+                <td>Total Price (HKD)</td>
+                <td>${{ cart_total_price }}</td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
 
-        <a href="/buy" class="btn btn-outline btn-info" role="button" aria-disabled="true">Confirm Purchase</a>
-    </div>
-
+    <a href="/buy" class="btn btn-outline btn-info" role="button" aria-disabled="true">Confirm Purchase</a>
 {% endblock %}

@@ -7,23 +7,21 @@
 {% block title %}Login{% endblock %}
 
 {% block content %}
-    <body class="text-center">
-        <div class="container">
-            <img class="mb-4" src="/static/images/image.png" alt="logo">
-            <h1 class="h3 mb-3 font-weight-normal">Please Login</h1>
-            <form action="/login" method="post">
-                <div class="form-group">
-                    <input autocomplete="off" class="form-control" name="username" placeholder="Username" type="text">
-                </div>
+    <div class="container text-center">
+        <img class="mb-4" src="/static/images/image.png" alt="logo">
+        <h1 class="h3 mb-3 font-weight-normal">Please Login</h1>
+        <form action="/login" method="post">
+            <div class="form-group">
+                <input autocomplete="off" class="form-control" name="username" placeholder="Username" type="text">
+            </div>
 
-                <div class="form-group">
-                    <input autocomplete="off" class="form-control" name="password" placeholder="Password" type="password">
-                </div>
+            <div class="form-group">
+                <input autocomplete="off" class="form-control" name="password" placeholder="Password" type="password">
+            </div>
 
-                <button class="btn btn-lg btn-block btn-primary" type="submit">Log In</button>
-                <br>
-            </form>
-            <a href="/register">Do not have an account?</a>
-        </div>
-    </body>
+            <button class="btn btn-lg btn-block btn-primary" type="submit">Log In</button>
+            <br>
+        </form>
+        <a href="/register">Do not have an account?</a>
+    </div>
 {% endblock %}

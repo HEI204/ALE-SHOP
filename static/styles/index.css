@@ -1,14 +1,11 @@
 .row {
     color:black;
-    justify-content: space-around;
     margin-top:50px;
 }
 
 .card {
     box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
-    width: 18rem;
-    margin-bottom: 30px;
 }
 
 .card:hover {

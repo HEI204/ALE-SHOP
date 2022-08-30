@@ -15,15 +15,13 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <h1 class="h3 mb-3 font-weight-normal">Current Amount of Cash: ${{ user_cash }}</h1>
-        <hr>
-        <form action="/add_cash" method="post">
-            <div class="form-group">
-                <label for="added_cash">Cash To Be Add: </label>
-                <input autocomplete="off" class="form-control" name="added_cash" id="added_cash" placeholder="Add Cash" type="text">
-            </div>
-            <button class="btn btn-sm btn-block btn-primary" type="submit">Add</button>
-        </form>
-    </div>
+    <h1 class="h3 mb-3 font-weight-normal">Current Amount of Cash: ${{ user_cash }}</h1>
+    <hr>
+    <form action="/add_cash" method="post">
+        <div class="form-group">
+            <label for="added_cash">Cash To Be Add: </label>
+            <input autocomplete="off" class="form-control" name="added_cash" id="added_cash" placeholder="Add Cash" type="text">
+        </div>
+        <button class="btn btn-sm btn-block btn-primary" type="submit">Add</button>
+    </form>
 {% endblock %}
